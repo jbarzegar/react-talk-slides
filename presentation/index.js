@@ -3,6 +3,7 @@ import React from "react";
 
 // Import Spectacle Core tags
 import {
+  Appear,
   Deck,
   Heading,
   Slide,
@@ -42,7 +43,7 @@ export default class Presentation extends React.Component {
   render() {
     return (
       <Deck
-        transition={["zoom", "slide"]}
+        transition={["fade", "zoom"]}
         transitionDuration={500}
         theme={theme}
       >
@@ -65,7 +66,7 @@ export default class Presentation extends React.Component {
 
         <Slide>
           <BlockQuote margin={0}>
-            <Quote textColor="secondary" fit>
+            <Quote textColor="secondary" textSize={60}>
               React is a declarative, efficient, and flexible JavaScript library
               for building user interfaces.
             </Quote>
@@ -78,7 +79,7 @@ export default class Presentation extends React.Component {
         </Slide>
 
         <Slide>
-          <Heading>Here's what we're covering:</Heading>
+          <Heading textSize={60}>Here's what we're covering:</Heading>
           <List>
             <ListItem>React (Obviously)</ListItem>
             <ListItem>Managing your app with state</ListItem>
@@ -86,6 +87,12 @@ export default class Presentation extends React.Component {
             <ListItem>The Virtual DOM</ListItem>
             <ListItem>Some cool ES6/ES7 stuffs</ListItem>
           </List>
+        </Slide>
+        <Slide>
+          <Heading>Cool?</Heading>
+          <Appear>
+            <Text textSize={100}>Cool.</Text>
+          </Appear>
         </Slide>
       </Deck>
     );
